@@ -147,7 +147,6 @@ header ul li {
 header ul li a {
     text-decoration: none;
     color: #fff;
-    transition: 1s;
 }
 
 header ul li a:hover {
