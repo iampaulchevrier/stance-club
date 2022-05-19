@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/*===== Reset CSS =====*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*===== Custom Colors =====*/
+
+:root {
+    --black: #191919;
+}
+
+/*===== Custom Scrollbar =====*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f00;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/*===== CSS =====*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/*===== Responsive =====*/
+
+@media screen and (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav {
+        width: 100%;
+    }
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+
+header .logo-container {
+    position: relative;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header .logo {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding-left: 15px;
+    border-left: #f00 2px solid;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header ul {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li {
+    list-style: none;
+    margin: 0 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 1s;
+}
+
+header ul li a:hover {
+    border-bottom: #f00 2px solid;
+}
+
+/* Main */
+section {
+    position: relative;
+    height: 100vh;
+}
+
+#home {
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url(https://64.media.tumblr.com/b06434f6de7b80596d236ca1301a2c5e/tumblr_ozs1t9KgdE1wdzl84o1_500.gifv);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, var(--black), transparent);
+    z-index: 1000;
+}
+
+#about {
+    padding: 50px;
+    display: block;
+    background-color: var(--black);
+}
+
+#cars {
+    padding: 50px;
+    display: block;
+    background-color: #fff;
+}
+
+#contact {
+    padding: 50px;
+    display: block;
+    background-color: var(--black);
+}
+
+footer {
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+footer img {
+    height: auto;
+    width: 75px;
+}
+
+footer .social {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .social a {
+    margin-left: 20px;
+    color: #000;
+    font-size: 1.5em;
+}
+
+footer .social a:hover {
+    color: #f00;
+}
