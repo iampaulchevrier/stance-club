@@ -87,13 +87,10 @@ table {
 /*===== Responsive =====*/
 
 @media screen and (max-width: 700px) {
-    .header {
-        flex-direction: column;
-        justify-content: center;
-    }
 
-    .nav {
+    .header .nav {
         width: 100%;
+        flex-direction: column;
     }
 
     section .section-title h2.title {
@@ -127,6 +124,29 @@ table {
     .footer {
         flex-direction: column;
     }
+
+}
+
+@media screen and (max-width: 1050px) {
+    
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #cars .cars-list .car {
+        align-items: center;
+    }
+
+    #cars .cars-list .car .car-header {
+        align-items: center;
+    }
+
+    #cars .cars-list .car .car-content {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
 }
 
 /*===== CSS =====*/
@@ -176,6 +196,11 @@ header .logo {
     text-transform: uppercase;
 }
 
+header .nav {
+    display: flex;
+    flex-direction: row;
+}
+
 header ul {
     padding: 30px 0;
     display: flex;
@@ -184,13 +209,14 @@ header ul {
 }
 
 header ul li {
-    margin: 0 30px;
+    margin: 20px 30px;
     list-style: none;
 }
 
 header ul li a {
     text-decoration: none;
     color: var(--white);
+    white-space: nowrap;
 }
 
 header ul li a:hover {
@@ -270,6 +296,10 @@ section p {
     color: var(--white);
 }
 
+#about p {
+    text-align: justify;
+}
+
 #cars {
     padding: 50px;
     display: block;
@@ -298,9 +328,12 @@ section p {
 
 #cars .cars-list .car {
     margin: 50px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #cars .cars-list .car .car-header {
+    width: 100%;
     margin: 0 30px;
     display: flex;
     flex-direction: column;
@@ -333,13 +366,14 @@ section p {
 }
 
 #cars .cars-list .car .car-content .car-infos {
-    margin: 30px 30px 30px 0;
+    margin: 30px;
     display: flex;
     flex-direction: column;
 }
 
 #cars .cars-list .car .car-content .car-infos p {
     margin: 0 0 1em 0;
+    text-align: justify;
 }
 
 #contact {
@@ -385,7 +419,7 @@ footer .social {
 }
 
 footer .social a {
-    margin-left: 20px;
+    margin-left: 30px;
     color: var(--black);
     font-size: 1.5em;
 }
