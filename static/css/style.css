@@ -56,6 +56,10 @@ table {
 
 :root {
     --black: #191919;
+    --blood: #c80000;
+    --dark-blood: #960000;
+    --ferrari: #ff0000;
+    --white: #ffffff;
 }
 
 /*===== Custom Scrollbar =====*/
@@ -65,23 +69,19 @@ table {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f00;
+    background: var(--ferrari);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blood);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--dark-blood);
 }
 
 ::-webkit-scrollbar-track {
     background: #fff;
-}
-
-/*===== CSS =====*/
-
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
 }
 
 /*===== Responsive =====*/
@@ -95,6 +95,50 @@ body {
     .nav {
         width: 100%;
     }
+
+    section .section-title h2.title {
+        align-items: center;
+    }
+
+    #cars h3 {
+        text-align: center;
+    }
+
+    #cars .cars-list .car .car-header {
+        align-items: center;
+    }
+
+    #cars .cars-list .car .car-content {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    #cars .cars-list .car .car-content img {
+        height: 250px !important;
+        width: 250px !important;
+    }
+
+    #cars .cars-list .car .car-content .car-infos {
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+/*===== CSS =====*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -124,9 +168,9 @@ header .logo {
     height: auto;
     width: auto;
     padding-left: 15px;
-    border-left: #f00 2px solid;
+    border-left: var(--ferrari) 5px solid;
     color: #fff;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
@@ -140,23 +184,60 @@ header ul {
 }
 
 header ul li {
-    list-style: none;
     margin: 0 30px;
+    list-style: none;
 }
 
 header ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 
 header ul li a:hover {
-    border-bottom: #f00 2px solid;
+    border-bottom: var(--ferrari) 2px solid;
 }
 
 /* Main */
+
+h2 {
+    padding-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
 section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+section .section-title {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+section .underline {
+    position: relative;
+    width: 100px;
+    border-bottom: var(--ferrari) 5px solid;
+}
+
+section h3 {
+    padding-bottom: 20px;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+section p {
+    margin: 1em 0;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 #home {
@@ -186,45 +267,129 @@ section {
     padding: 50px;
     display: block;
     background-color: var(--black);
+    color: var(--white);
 }
 
 #cars {
     padding: 50px;
     display: block;
-    background-color: #fff;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#cars .section-title {
+    margin: 0;
+}
+
+#cars h3 {
+    padding-bottom: 30px;
+    text-transform: uppercase;
+}
+
+
+#cars h4 {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+#cars p {
+    color: var(--black);
+}
+
+#cars .cars-list .car {
+    margin: 50px 0;
+}
+
+#cars .cars-list .car .car-header {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#cars .cars-list .car .car-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#cars .cars-list .car .car-owner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#cars .cars-list .car .car-owner .fa-instagram {
+    height: auto;
+    width: 20px;
+    margin-right: 5px;
+}
+
+#cars .cars-list .car .car-content img {
+    max-height: 400px;
+    max-width: 400px;
+    margin: 30px;
+    border: var(--ferrari) 5px solid;
+    border-radius: 15px;
+}
+
+#cars .cars-list .car .car-content .car-infos {
+    margin: 30px 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#cars .cars-list .car .car-content .car-infos p {
+    margin: 0 0 1em 0;
 }
 
 #contact {
     padding: 50px;
     display: block;
     background-color: var(--black);
+    color: var(--white);
 }
 
 footer {
     width: 100%;
-    padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
-footer img {
+footer .logo-container {
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+footer .logo {
+    position: relative;
     height: auto;
-    width: 75px;
+    width: auto;
+    padding-left: 15px;
+    border-left: var(--ferrari) 5px solid;
+    color: var(--black);
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 footer .social {
+    padding: 50px 100px;
     display: flex;
     flex-direction: row;
 }
 
 footer .social a {
     margin-left: 20px;
-    color: #000;
+    color: var(--black);
     font-size: 1.5em;
 }
 
 footer .social a:hover {
-    color: #f00;
+    color: var(--ferrari);
 }
