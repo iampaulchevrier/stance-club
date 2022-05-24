@@ -233,6 +233,15 @@ h2 {
 
 a {
     text-decoration: none;
+    color: var(--blood);
+}
+
+a:hover {
+    color: var(--ferrari);
+}
+
+a:visited {
+    color: var(--ferrari);
 }
 
 section {
