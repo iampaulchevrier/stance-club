@@ -128,7 +128,7 @@ table {
 }
 
 @media screen and (max-width: 1050px) {
-    
+
     .header {
         flex-direction: column;
         justify-content: center;
@@ -188,7 +188,7 @@ header .logo {
     height: auto;
     width: auto;
     padding-left: 15px;
-    border-left: var(--ferrari) 5px solid;
+    border-left: 5px solid var(--ferrari);
     color: #fff;
     font-size: 2.5em;
     font-weight: 700;
@@ -220,28 +220,15 @@ header ul li a {
 }
 
 header ul li a:hover {
-    border-bottom: var(--ferrari) 2px solid;
+    color: var(--white);
+    border-bottom: 3px solid var(--ferrari);
 }
 
 /* Main */
-
 h2 {
     padding-bottom: 20px;
     font-size: 2.5em;
     font-weight: 600;
-}
-
-a {
-    text-decoration: none;
-    color: var(--blood);
-}
-
-a:hover {
-    color: var(--ferrari);
-}
-
-a:visited {
-    color: var(--ferrari);
 }
 
 section {
@@ -259,7 +246,7 @@ section .section-title {
 section .underline {
     position: relative;
     width: 100px;
-    border-bottom: var(--ferrari) 5px solid;
+    border-bottom: 5px solid var(--ferrari);
 }
 
 section h3 {
@@ -275,6 +262,7 @@ section p {
     line-height: 1.5em;
 }
 
+/* Home section */
 #home {
     width: 100%;
     padding: 100px;
@@ -298,6 +286,7 @@ section p {
     z-index: 1000;
 }
 
+/* About section */
 #about {
     padding: 50px;
     display: block;
@@ -309,6 +298,7 @@ section p {
     text-align: justify;
 }
 
+/* Cars section */
 #cars {
     padding: 50px;
     display: block;
@@ -333,6 +323,19 @@ section p {
 
 #cars p {
     color: var(--black);
+}
+
+#cars a {
+    text-decoration: none;
+    color: var(--blood);
+}
+
+#cars a:hover {
+    color: var(--ferrari);
+}
+
+#cars a:visited {
+    color: var(--ferrari);
 }
 
 #cars .cars-list .car {
@@ -370,7 +373,7 @@ section p {
     max-height: 400px;
     max-width: 400px;
     margin: 30px;
-    border: var(--ferrari) 5px solid;
+    border: 5px solid var(--ferrari);
     border-radius: 15px;
 }
 
@@ -385,13 +388,86 @@ section p {
     text-align: justify;
 }
 
+/* Contact section */
 #contact {
+    min-height: 100vh;
     padding: 50px;
     display: block;
     background-color: var(--black);
     color: var(--white);
 }
 
+#contact .form-container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .contact-form {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .contact-form .form-field {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .contact-form .form-field input {
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+#contact .contact-form .form-field textarea {
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    resize: none;
+    border: 0;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+#contact .contact-form .form-field .btn-submit {
+    width: 200px;
+    padding: 20px;
+    background-color: var(--ferrari);
+    color: var(--white);
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+#contact .contact-form .form-field .btn-submit:hover {
+    cursor: pointer;
+    background-color: var(--blood);
+}
+
+#contact .contact-form .form-field .btn-submit:active {
+    cursor: progress;
+    background-color: var(--dark-blood);
+    transform: scale(0.95);
+}
+
+/* Footer */
 footer {
     width: 100%;
     display: flex;
@@ -413,7 +489,7 @@ footer .logo {
     height: auto;
     width: auto;
     padding-left: 15px;
-    border-left: var(--ferrari) 5px solid;
+    border-left: 5px solid var(--ferrari);
     color: var(--black);
     font-size: 2em;
     font-weight: 700;
